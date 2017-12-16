@@ -1,0 +1,31 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    byebug (9.1.0)
+    daemons (1.2.5)
+    eventmachine (1.2.5)
+    oj (3.3.9)
+    rack (2.0.3)
+    rack-jsonparser (1.0.2)
+      oj (~> 3)
+      rack (~> 2)
+    rake (12.3.0)
+    thin (1.7.2)
+      daemons (~> 1.0, >= 1.0.9)
+      eventmachine (~> 1.0, >= 1.0.4)
+      rack (>= 1, < 3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  byebug
+  rack-jsonparser
+  rake
+  thin
+
+RUBY VERSION
+   ruby 2.4.2p198
+
+BUNDLED WITH
+   1.16.0
