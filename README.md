@@ -1,6 +1,6 @@
 # Mock Service
 
-Mock API responses using rack. Helpful for development and debugging.
+Mock API responses using ruby, rack and docker (compose). Helpful for development and debugging.
 
 ## Prerequisites
 
@@ -13,7 +13,11 @@ Since this app is just a plain `rack` application, the [rack interface](https://
 
 Edit the `config.ru` file and add a handler which will return the response you give it. Then map an endpoint to the created handler. Clients can then query the endpoint and receive the mock response.
 
+See the `docker-compose.yml` file for an example of how to slot mock service into your development workflow using docker-compose.
+
 ### JSON Responses
+
+A mock response doesn't have to contain JSON but if it does, there are some handy helpers reducing the amount of boilerplate code.
 
 The gem [`rack-jsonparser`](https://github.com/michaeltelford/rack_jsonparser) provides the JSON parsing middleware.
 
@@ -27,4 +31,4 @@ You can load a JSON file into a string to be returned using the helper method `f
 
 ## Usage
 
-Run `rake` to see the available commands for running the mock server.
+Run `bundle exec rake help` to see the available commands for running the mock server.

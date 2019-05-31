@@ -1,5 +1,7 @@
-FROM ruby:2.4-alpine3.4
-MAINTAINER Michael Telford
+# Uses alpine:3.9 underneath.
+FROM ruby:2.5.5-alpine
+
+WORKDIR /app
 
 RUN apk --update add --virtual \
       build_deps \
@@ -17,9 +19,9 @@ RUN apk --update add --virtual \
       curl-dev \
       jq
 
-WORKDIR /app
-COPY . /app
+COPY Gemfile* ./
+RUN bundle install
 
-RUN bundle
+COPY . .
 
 CMD ["bundle", "exec", "rake", "serve"]

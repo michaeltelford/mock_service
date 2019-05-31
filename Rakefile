@@ -18,7 +18,7 @@ end
 
 desc "Runs the docker image assuming it's built"
 task :run do
-  system "docker run --rm --name mock_service -p #{port}:#{port} -e PORT=#{port} mock_service"
+  system "PORT=#{port} docker-compose up"
 end
 
 def port
