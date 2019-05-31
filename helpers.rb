@@ -5,7 +5,7 @@ end
 
 def file(path)
   if File.exist?(path) and File.file?(path)
-    File.open(path) { |f| f.read }
+    File.read(path)
   else
     raise "Incorrect path to file: #{path}"
   end

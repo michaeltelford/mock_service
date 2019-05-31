@@ -22,7 +22,7 @@ end
 
 # Map an endpoint to a service handler.
 app = Rack::Builder.new do
-  use Rack::JSONParser, transform_request: true, transform_response: true
+  use Rack::JSONParser
 
   map('/healthcheck') { run healthcheck }
   map('/auth') { run auth }

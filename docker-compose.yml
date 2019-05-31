@@ -1,0 +1,17 @@
+version: '2'
+services:
+  mock:
+    image: mock_service
+    container_name: mock_service
+    env_file: .env
+    ports:
+      - "${PORT}:${PORT}"
+    volumes:
+      - ".:/app"
+  client:
+    image: mock_service
+    container_name: client
+    env_file: .env
+    depends_on:
+      - mock
+    command: bash -c "sleep 3; curl http://mock:9292/profile | jq"
