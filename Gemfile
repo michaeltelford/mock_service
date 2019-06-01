@@ -7,6 +7,7 @@ gem 'rack'
 gem 'thin'
 gem 'shotgun'
 gem 'rake'
+gem 'dotenv'
 
 group :development do
   gem 'byebug'

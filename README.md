@@ -23,13 +23,11 @@ You can load a file (containing HTML, JSON etc.) into a string using the helper 
 
 ### JSON
 
-A mock response doesn't have to contain JSON but if it does, there are some handy helpers to reduce the amount of boilerplate code.
-
 The gem [`rack-jsonparser`](https://github.com/michaeltelford/rack_jsonparser) provides the JSON parsing middleware. This means that...
 
-A response body consisting of a ruby `Hash` will automatically be converted into a JSON string as long as the response `Content-Type` is correctly set to `application/json`.
+A response body consisting of a ruby `Hash` will automatically be converted into a JSON string as long as the response `Content-Type` header is correctly set to `application/json`.
 
-Alternatively a string of JSON can be provided. It's up to you to ensure the JSON is valid.
+Alternatively, a string of JSON can be provided. It's up to you to ensure the JSON is valid.
 
 ## Examples
 
