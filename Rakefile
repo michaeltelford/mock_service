@@ -8,7 +8,7 @@ end
 desc "Run the server locally on ENV['PORT']"
 task :serve do
   puts "Running the mock server on port #{port}"
-  system "bundle exec rackup -s Thin -o 0.0.0.0 -p #{port}"
+  system "bundle exec shotgun -s Thin -o 0.0.0.0 -p #{port}"
 end
 
 desc "Builds the mock service docker image"

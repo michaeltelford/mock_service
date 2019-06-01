@@ -2,7 +2,7 @@ version: '2'
 services:
   mock:
     image: mock_service
-    container_name: mock_service
+    container_name: mock
     env_file: .env
     ports:
       - "${PORT}:${PORT}"

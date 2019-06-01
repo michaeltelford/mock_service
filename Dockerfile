@@ -20,7 +20,7 @@ RUN apk --update add --virtual \
       jq
 
 COPY Gemfile* ./
-RUN bundle install
+RUN bundle install --without=development
 
 COPY . .
 
