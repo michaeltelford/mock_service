@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '~> 2.5'
 
 gem 'rack-jsonparser'
-gem 'rack'
+gem 'rack', ">= 2.0.6"
 gem 'thin'
 gem 'shotgun'
 gem 'rake'
