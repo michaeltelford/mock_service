@@ -8,6 +8,7 @@ gem 'thin'
 gem 'shotgun'
 gem 'rake'
 gem 'dotenv'
+gem 'simple_router'
 
 group :development do
   gem 'byebug'
