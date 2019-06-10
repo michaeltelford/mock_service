@@ -9,9 +9,10 @@ end
 
 desc "Run the server locally on ENV['PORT']"
 task serve: :dotenv do
-  puts "Running the mock server on port #{port}"
-  system "bundle exec shotgun -s Thin -o 0.0.0.0 -p #{port}"
+  puts "Running mock service on port #{port}"
+  system "bundle exec shotgun -o 0.0.0.0 -p #{port}"
 end
+task local: :serve
 
 desc "Builds the mock service docker image"
 task :build do

@@ -17,7 +17,8 @@ RUN apk --update add --virtual \
       make \
       curl \
       curl-dev \
-      jq
+      jq \
+    && gem update
 
 COPY Gemfile* ./
 RUN bundle install --without=development
